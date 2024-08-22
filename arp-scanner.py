@@ -16,6 +16,9 @@ GitHub: Zeta-0x00
 #region imports
 import logging
 logging.getLogger(name="scapy.runtime").setLevel(level=logging.ERROR)
+import warnings
+from cryptography.utils import CryptographyDeprecationWarning
+warnings.filterwarnings("ignore", category=CryptographyDeprecationWarning)
 from termcolor import colored
 import scapy.all as scapy # type: ignore
 from types import FrameType
